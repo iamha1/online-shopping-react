@@ -1,0 +1,65 @@
+h1{text-align: center; font-family: 'Times New Roman', Times, serif; color: blueviolet;} 
+
+h3{
+  text-align: center;
+  font-weight: bold;
+}
+
+body {
+font-family: 'Times New Roman', Times, serif;
+font-size: large;
+}
+
+.column {
+    float: left;
+    width: 23%;
+    text-align: center;  
+
+  }
+
+#addDollarButton{
+    background-color: blue;
+    font-size: x-large;
+
+    
+}
+#addQuarterButton{
+background-color: darkred; 
+font-size: x-large;
+
+}
+
+#addDimeButton{
+   background-color: green;
+   font-size: x-large;
+
+}
+#addNickelButton{
+   background-color: indigo;
+   font-size: x-large;
+
+}
+
+#makePurchaseBtn{
+  background-color: midnightblue;
+  font-size: x-large;
+}
+#changeBtn {
+  background-color: orange;
+  align-items: center;
+  font-size: x-large;
+}
+
+.row{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 35px;
+  padding-left: 20px;
+}
+#change{
+  height: 90px;
+}
+
+
+
+  
+  

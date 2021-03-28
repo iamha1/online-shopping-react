@@ -1,35 +1,40 @@
 import React from 'react';
+import { Form } from 'react-bootstrap';
 
 
 export default function AddMoney() {
     return (
         <div id="totalContainer" className="container">
-            <form>
-                <div>
-                    <h3>Total $ In</h3>
-                    <div className="form-group">
-                        <input type="text" readonly id="moneyInput" className="form-control" />
-                    </div>
-                    </div>
-                    <div>
-                        <div className="row text-center">
-                            <div className="col">
-                                <button type="button" id="addDollarButton" className="btn btn-info">Add Dollar</button>
-                            </div>
-                            <div class="col">
-                                <button type="button" id="addQuarterButton" className="btn btn-info">Add Quarter</button>
-                            </div>
-                        </div>
-                        <div className="row text-center">
-                            <div className="col">
-                                <button type="button" id="addDimeButton" className="btn btn-info"> Add  Dime</button>
-                            </div>
-                            <div className="col">
-                                <button type="button" id="addNickelButton" className="btn btn-info">Add  Nickel</button>
-                            </div>
-                        </div>
-                </div> 
-                </form>
+          <Form>
+        <div>
+        <h3> Total $ In </h3>
+        <Form.Group>
+            {/* a bootstrap thing */}
+        <Form.Control as="input" id="moneyInput" readOnly />
+        </Form.Group>
+        </div>
+        <Row className="text-center">
+        <Col>
+        <Button type="button" id="addDollarButton" className="btn-info">Add Dollar </Button>
+        </Col>
+        <Col>
+        <Button type="button" id="addQuarterButton" className="btn-info">Add Quarter </Button>
+        </Col>
+
+        
+        </Row>
+        <Row className="text-center">
+        <Col>
+        <Button type="button" id="addDimeButton" className="btn-info">Add Dime </Button>
+        </Col>
+        <Col>
+        <Button type="button" id="addNickelButton" className="btn-info">Add Nickel </Button>
+        </Col>
+
+
+        </Row>
+            </Form>
+
         </div>
      );
      }

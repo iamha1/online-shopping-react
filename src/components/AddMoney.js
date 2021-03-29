@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import {Form, Row, Button, Col } from 'react-bootstrap';
 
 
 export default function AddMoney() {
@@ -21,7 +21,7 @@ export default function AddMoney() {
         <Button type="button" id="addQuarterButton" className="btn-info">Add Quarter </Button>
         </Col>
 
-        
+
         </Row>
         <Row className="text-center">
         <Col>

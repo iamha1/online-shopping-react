@@ -3,10 +3,9 @@ import AddMoney from './components/AddMoney';
 import Purchase from './components/Purchase';
 import ReturnChange from './components/ReturnChange';
 import './css/style.css';
-import { Container, Row, Col }  from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Card from './components/Card';
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
 
 const SERVICE_URL = "https://tsg-vending.herokuapp.com";
 
@@ -17,17 +16,17 @@ class App extends Component {
       loading: false,
       itemData: [
         {
-          "id": 1, 
-          "name": "Snickers", 
-          "price": 1.5, 
-          "quantity": 10 
+          "id": 1,
+          "name": "Snickers",
+          "price": 1.5,
+          "quantity": 10
         }]
     };
   }
 
   loadItemData() {
     this.setState({ loading: true })
-    console.log("Loading item data")
+    console.log("Now Loading Items")
     fetch(SERVICE_URL + "/items")
       .then(data => data.json())
       .then(data => this.setState(
@@ -39,38 +38,45 @@ class App extends Component {
     this.loadItemData();
   }
 
-render() {
+  render() {
 
-  return (
-    <div className="App">
+    return (
+      <div className="App">
 
-      <Container fluid>
-        <Row>
-          <Col>Vending Machine </Col>
+        <Container fluid>
+          <div>
+          <Row>
+            <Col><h1>Vending Machine</h1> </Col>
+
           </Row>
-        <Row>
-          <Col sm={9}> 
-          <Card items={this.state.itemData} />
+          </div>
+         
+         
+          <Row>
+            <Col sm={9}>
+              <Card items={this.state.itemData} />
 
-          </Col>
+            </Col>
 
-          <Col sm={3}>
-      <AddMoney />
+            <Col sm={3}>
+              <div>
+              <AddMoney />
+
+              </div>
+              <div>
+              <Purchase />
+              </div>
+              <div>
+              <ReturnChange />
+              </div>
+            </Col>
 
 
-      <Purchase />
+          </Row>
+        </Container>
 
-
-      <ReturnChange />
-      
-      </Col>
-
-
-      </Row>
-      </Container>
-
-    </div>
-  );
-}
+      </div>
+    );
+  }
 }
 export default App;

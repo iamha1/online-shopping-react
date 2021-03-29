@@ -15,20 +15,20 @@ export default function AddMoney() {
         </div>
         <Row className="text-center">
         <Col>
-        <Button type="button" id="addDollarButton" className="btn-info">Add Dollar </Button>
+        <Button variant="secondary" type="button" id="addDollarButton" className="btn-info">Add Dollar </Button>
         </Col>
         <Col>
-        <Button type="button" id="addQuarterButton" className="btn-info">Add Quarter </Button>
+        <Button variant="secondary" type="button" id="addQuarterButton" className="btn-info">Add Quarter </Button>
         </Col>
 
 
         </Row>
         <Row className="text-center">
         <Col>
-        <Button type="button" id="addDimeButton" className="btn-info">Add Dime </Button>
+        <Button variant="secondary" type="button" id="addDimeButton" className="btn-info">Add Dime </Button>
         </Col>
         <Col>
-        <Button type="button" id="addNickelButton" className="btn-info">Add Nickel </Button>
+        <Button variant="secondary" type="button" id="addNickelButton" className="btn-info">Add Nickel </Button>
         </Col>
 
 

@@ -1,16 +1,17 @@
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card, Row, Col, Button } from 'react-bootstrap';
 import React, { Component } from 'react';
 
-const CardContent = ({ items }) => {
+const CardContent = ({ items, selectingItem }) => {
     let num = items.price
 
     return (
         <Col sm={4}>
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem'}} id="cardDisplay">
             <p>{items.id}  </p>
             <p>{items.name} </p>
             <p>{num.toFixed(2)} </p>
             <p> Quantity: {items.quantity}</p>
+            <Button id="buyBtn" value={items.id} onClick={selectingItem}>Buy</Button>
         </Card>
 
         </Col>
@@ -86,7 +87,9 @@ class CardItem extends Component {
                 <Row>
                     {this.props.items.map((items, i) => {
                         return (
-                            <CardContent items={items} key={i} sel={this.props.handleClick} />
+                            <CardContent items={items} key={i} selectingItem={this.props.selectingItem}
+                                                        
+                            />
                         )
                     })}
                 </Row>
@@ -97,15 +100,8 @@ class CardItem extends Component {
 export default CardItem;
 
 
-//  <Card style={{width: '18rem', }}>
-//     <Card.Header> {id} </Card.Header>
-//     <ListGroup className="list-group-flush">
-//         <ListGroup.Item>{name}</ListGroup.Item>
-//         <ListGroup.Item> '$' + { formatToCurrency(price) }</ListGroup.Item>
-//         <ListGroup.Item> 'Quantity left:' + { quantity}</ListGroup.Item>
 
-//     </ListGroup>
-// </Card>
+
 
 
 

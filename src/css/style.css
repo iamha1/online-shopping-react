@@ -22,6 +22,7 @@ font-size: large;
   font-size: large;
   width: 150px;
 
+
     
 }
 #addQuarterButton{
@@ -44,6 +45,7 @@ font-size: large;
 #makePurchaseBtn{
   font-size: large;
   width: 200px;
+  position: center;
 }
 #changeBtn {
   align-items: center;
@@ -64,6 +66,13 @@ div{
   row-gap: 30px;
 }
 
+ #buyBtn{
+   background-color:midnightblue;
+} 
+
+#cardDisplay{
+  background-color:honeydew;
+}
 
   
   
